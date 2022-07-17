@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "home-advanced-6": {
+    "home-advanced-7": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "home-advanced-6:build:production"
+              "browserTarget": "home-advanced-7:build:production"
             },
             "development": {
-              "browserTarget": "home-advanced-6:build:development"
+              "browserTarget": "home-advanced-7:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "home-advanced-6:build"
+            "browserTarget": "home-advanced-7:build"
           }
         },
         "test": {
