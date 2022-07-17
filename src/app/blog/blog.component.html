@@ -1,0 +1,16 @@
+<div class="container mb-3 mt-3">
+    <div class="row">
+        <div class="col-4 mt-3" *ngFor="let blog of userBlogs">
+            <div class="card w-100">
+                <img [src]="blog.imagePath" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a class="card-link" href="#">
+                    <small>{{ blog.author | titlecase}}</small>
+                  </a>
+                  <h5 class="card-title">{{ blog.title }}</h5>
+                  <p class="card-text">{{ blog.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

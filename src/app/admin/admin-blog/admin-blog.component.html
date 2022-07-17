@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <form>
+        <div class="mb-3">
+            <input type="text" name="titleInput" id="titleInput" class="form-control" placeholder="title here.." [(ngModel)]="titleInput">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="textInput" id="textInput" class="form-control" placeholder="text here.." [(ngModel)]="textInput">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="authorInput" id="authorInput" class="form-control" placeholder="author here.." [(ngModel)]="authorInput">
+        </div>
+        <button [disabled]="!authorInput" *ngIf="!editStatus" type="button" class="btn btn-dark w-10" (click)="addBlog()">Add</button>
+        <button [disabled]="!authorInput" *ngIf="editStatus" type="button" class="btn btn-dark w-10" (click)="saveBlog()">Save</button>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Text</th>
+                <th scope="col">Author</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let blog of adminBlogs">
+                <td>{{ blog.id }}</td>
+                <td>{{ blog.title }}</td>
+                <td>{{ blog.text }}</td>
+                <td>{{ blog.author }}</td>
+                <td>
+                    <button (click)="editBlog(blog)" type="button" class="btn btn-secondary me-2">Edit</button>
+                    <button [disabled]="editStatus" (click)="deleteBlog(blog)" type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

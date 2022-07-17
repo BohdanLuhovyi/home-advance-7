@@ -1,20 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageComponent } from './page/page.component';
+
+import { HeaderComponent } from './header/header.component';
+
+import { AdminComponent } from './admin/admin.component';
+import { AdminBlogComponent } from './admin/admin-blog/admin-blog.component';
+import { BlogComponent } from './blog/blog.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    HeaderComponent,
+    AdminComponent,
+    AdminBlogComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
